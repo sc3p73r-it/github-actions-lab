@@ -5,22 +5,8 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Cowsay
-        run:  |
-          sudo apt update
-          sudo apt install cowsay -y
+       - name: Checkout Repository
+         uses: actions/checkout@v7.0.1
 
-      - name: Run Cowsay
-        run: /usr/games/cowsay "Hello From Github Actions!"
-
-      - name: Use Custom Character
-        run: /usr/games/cowsay -f dragon "I am a dragon." >> dragon.txt
-
-      - name: Verify Output
-        run: grep -i "dragon" dragon.txt
-
-      - name: Display file
-        run: cat dragon.txt
-
-      - name: List file
-        run: ls -ltra
+       - name: List Files
+         run: ls -l
