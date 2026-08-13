@@ -12,4 +12,6 @@ jobs:
          run: ls -l
 
        - name: Run Script
-         run: ./cowsay-install.sh
+         run: |
+            chmod +x cowsay-install.sh
+            ./cowsay-install.sh
