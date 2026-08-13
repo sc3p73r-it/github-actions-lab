@@ -10,3 +10,6 @@ jobs:
 
        - name: List Files
          run: ls -l
+
+       - name: Run Script
+         run: ./cowsay-install.sh
