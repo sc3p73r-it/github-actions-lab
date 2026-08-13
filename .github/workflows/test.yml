@@ -14,4 +14,13 @@ jobs:
         run: /usr/games/cowsay "Hello From Github Actions!"
 
       - name: Use Custom Character
-        run: /usr/games/cowsay -f dragon "I am a dragon."
+        run: /usr/games/cowsay -f dragon "I am a dragon." >> dragon.txt
+
+      - name: Verify Output
+        run: grep -i "dragon" dragon.txt
+
+      - name: Display file
+        run: cat dragon.txt
+
+      - name: List file
+        run: ls -ltra
